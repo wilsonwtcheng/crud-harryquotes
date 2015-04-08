@@ -1,5 +1,6 @@
 $(document).ready(function() { 
 
+
 var postContent;
 
   $('.searchButtonPost').click(function(){ // note: this will make the post even if some of the keys don't have any values.
@@ -26,7 +27,7 @@ var postContent;
     }
   );
 
-  $('.postTitleButton').click(function(){
+$('.postTitleButton').click(function(){
   postContentTitle = $('.postNameTitle').val();
  
   var postRequest = { 
@@ -44,7 +45,7 @@ var postContent;
     }
   );
 
-  $('.getButton').click(function(){
+$('.getButton').click(function(){
   getID = $('.getID').val();
  
   var getRequest = { //note: the variable request1 has to be within the search button click function because you can't define a variable within request1. And you need to define movieName within the same scope.
@@ -90,7 +91,7 @@ var postContent;
     }
   );
 
-  $('.deleteButton').click(function(){
+$('.deleteButton').click(function(){
   deleteID = $('.deleteID').val();
  
   var getRequest = { 
@@ -109,37 +110,49 @@ var postContent;
 
 
   $('.getListingButton').click(function(){
-  var getListingRequest = { 
+  var listRequest = { 
     type: "GET",
     url: "http://ga-wdi-api.meteor.com/api/posts/", //this URL is on GIT. If you should go Github, it's inside AJAX crud, 
-    data: {
-    },
+    //data: {},
     dataType: "JSON",
     success: function(response) {
       console.log("Great get list success", response);
-      // $('#getData').append(response);
-      var elements = ["title", "text", "user"];
-      for (i=0; i<response.length; i++) {
-      console.log(response.length);
-        // $('#listTitle').append(response[i]["title"]);
-
-        $('.bigTable').append("<tr>"+"hello"+"</tr>");
-        // var newTableRow;
-
-
-        $('#listTitle').append("<li>"+response[i]["title"]+"</li>");
-        //$('#listTitle').append("<br>");
-        $('#listText').append("<li>"+response[i]["text"]+"</li>");
-        // $('#listText').append("<br>");
-        $('#listUser').append("<li>"+response[i]["user"]+"</li>");
-        // $('#listUser').append("<br>");
-        }
-      }     
+      $('#all-posts > tbody').text(''); // wipe out the old list
+        // $('#all-posts > tbody').append(
+        //   "<tr class='post-item'>" + 
+        //   "<td>" + 
+        //   post._id + 
+        //   "</td>" + 
+        //   "<td>" + 
+        //   post.title + 
+        //   "</td>" + 
+        //   "<td>" + 
+        //   post.text + 
+        //   "</td>" + 
+        //   "<td>" + 
+        //   post.user + 
+        //   "</td>" + 
+        //   "</tr>");
+      response.forEach(function (post) {
+         $('#all-posts > tbody').append("<tr class='post-item'>" + "<td>" + post._id + "</td>" + "<td>" + post.title + "</td>" + "<td>" + post.text + "</td>" + "<td>" + post.user + "</td>" + "</tr>");
+      });
     }
-    $.ajax(getListingRequest);
-    }
-  )
+  }
+    $.ajax(listRequest);
+  }
+  );
+
 });
+  
+
+        // $('#listTitle').append("<li>"+response[i]["title"]+"</li>");
+        // //$('#listTitle').append("<br>");
+        // $('#listText').append("<li>"+response[i]["text"]+"</li>");
+        // // $('#listText').append("<br>");
+        // $('#listUser').append("<li>"+response[i]["user"]+"</li>");
+        // // $('#listUser').append("<br>");
+            
+// }); 
 
 
 
