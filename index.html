@@ -22,121 +22,65 @@
 
   <body>
 
-<div class="container-fluid gray">
-    <div class="jumbotron white col-md-offset-0 vert-offset jumboStyle"> 
+ <h3>HARRY QUOTE API</h3>
 
-   <h3>GA WDI API METEOR INFO</h3>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="searchPillBut"><a href="#">Search</a></li>
+    <li role="presentation" class="addPillBut"><a href="#">Add</a></li>
+    <li role="presentation" class="listPillBut"><a href="#">List</a></li>
+    <li role="presentation" class="deletePillBut"><a href="#">Delete</a></li>
+  </ul>
 
-      <h4>POST</h4>
+
+    <div class="search-div">
+      <h3>Search for a quote!</h3>
       <div class="input-group">
-        <input type="text" class="form-control postNameTitle" placeholder="Post Title...">
+        <input type="text" class="form-control search-value" placeholder="Search stuff here...">
         <span class="input-group-btn">
-          <button class="btn btn-default postTitleButton" type="button">Go!</button>
+          <button class="btn btn-default searchButton" type="button">Go!</button>
         </span>
       </div>
+      </div>
 
-      <div class="input-group">
-        <input type="text" class="form-control postNameText" placeholder="Post Text...">
-        <span class="input-group-btn">
-          <button class="btn btn-default " type="button">Go!</button>
+    <div class="list-div">
+      <h3>LIST EVERYTHING!</h3>
+      <button class="btn btn-default listButton" type="button">List all!</button>
+    </div>
+    </div>
+
+    <div class="add-div">
+      <h3>TO ADD TO HARRY QUOTE!</h3>
+          <input type="text" class="form-control newQuote" placeholder="Add new quote here...">
+          <input type="text" class="form-control newAuthor" placeholder="Add new author here...">
+           <button class="btn btn-default newButton" type="button">Go!</button>
         </span>
       </div>
+    </div>
 
-      <div class="input-group">
-        <input type="text" class="form-control postNameUser" placeholder="Post User...">
+    <div class="delete-div">
+      <h3>DELETE A QUOTE</h3>
+      <div class="input-group ">
+        <input type="text" class="form-control delete-value" placeholder="Input ID for quote deletion here...">
         <span class="input-group-btn">
-          <button class="btn btn-default " type="button">Go!</button>
+          <button class="btn btn-default deleteButton" type="button">Go!</button>
         </span>
       </div>
+    </div>
 
-      <span class="input-group-btn">
-        <button class="btn btn-default searchButtonPost " type="button">Post!</button>
-      </span>
+ <h3>QUOTES TABLE</h3>
 
-      <br>
-
-      <h4>GET</h4>
-      <div class="input-group">
-        <input type="text" class="form-control getID" placeholder="Input ID to Get...">
-        <span class="input-group-btn">
-          <button class="btn btn-default getButton" type="button">Get!</button>
-        </span>
-      </div>
-
-      <div id="getDataTitle">Title: </div>
-      <div id="getDataText">Text: </div>
-      <div id="getDataUser">User: </div>
-      <br>
-
-      <h4>PUT</h4>
-
-      <div class="input-group">
-        <input type="text" class="form-control putID" placeholder="Input Put ID...">
-      </div>
-
-      <div class="input-group">
-        <input type="text" class="form-control putInputTitle" placeholder="Put Title...">
-      </div>
-
-      <div class="input-group">
-        <input type="text" class="form-control putInputText" placeholder="Put Text...">
-      </div>
-
-      <div class="input-group">
-        <input type="text" class="form-control putInputUser" placeholder="Put User...">
-      </div>
-
-      <span class="input-group-btn">
-        <button class="btn btn-default putButton" type="button">Put!</button>
-      </span>
-
-      <br>
-
-      <h4>DELETE</h4>
-      <div class="input-group">
-        <input type="text" class="form-control deleteID" placeholder="Input ID...">
-        <span class="input-group-btn">
-          <button class="btn btn-default deleteButton" type="button">Delete!</button>
-        </span>
-      </div>
-      
-      <br>
-      <h4>Get all posts</h4>
-
-      <table id="all-posts" class="table table-condensed">
+      <table id="all-posts" class="table table-condensed" >
         <thead>
           <tr>
             <th>ID</th>
-            <th>Title</th>
-            <th>Text</th>
-            <th>User</th>
+            <th>Quote</th>
+            <th>Author</th>
           </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
 
-
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-default getListingButton" type="button">Get Posts!</button>
-        </span>
-      </div>
-
-      
-      <!-- <div class="bigTable">
-      <div class="row">
-      <div class="col-xs-4" id="listTitle">Col1</div>
-      <div class="col-xs-4" id="listText">Col2</div>
-      <div class="col-xs-4" id="listUser">Col3</div>
-      </div>
-
-      </div> -->
-
-
-      </div>
-
-</div>
 
 </body>
 </html>

@@ -1,43 +1,9 @@
-/*.jumbotron {
-	border-style: 10px solid red;
-}*/
-/*body {background: lightgrey;}
-*/
-.pink {background-color: pink;
-	}
-.blue {background-color: blue;
-	}
-.gray {background-color: #F8F8F8 ;
-	}
-.topJumboColour {background-color: #C9DFC9 ;
-	}
-.white {background-color: white;
-         border: 1px solid lightgrey;
-    }
-.white2 {background-color: white;
-	margin-top: 100px;
-              /*border: 1px solid lightgrey;*/
-    }
-.green {background-color: green;
-	}
-.purple {background-color: purple;
-	}
-.yellow {background-color: yellow;
-	}
-.red {background-color: red;
-	color: white;
-	}
-.orange {background-color: orange;
-	}
-.brown {background-color: brown;
-	}	
 
-.byben1 {font-style: italic; 
-	}
-
-.centerImg {
-	text-align: center;
+.table {
+	width: 100%;
+	border: 1px solid black;
 }
+
 
 .centerText {
 	text-align: center;
