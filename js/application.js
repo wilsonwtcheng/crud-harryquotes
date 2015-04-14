@@ -47,6 +47,8 @@ $(document).ready(function() {
       dataType: "JSON",
       success: function(response) {
         console.log("Great success", response);
+        $('.newQuote').val("");
+        $('.newAuthor').val("");
         // $('#all-posts > tbody').text(''); 
         // response(function (post) {
         //   $('#all-posts > tbody').append("<tr class='post-item'>" + "<td>" + post._id + "</td>" + "<td>" + post.quote + "</td>" + "<td>" + post.author + "</td></tr>" );
@@ -90,8 +92,12 @@ $(document).ready(function() {
       type: "DELETE",
       url: 'http://harry-quotes-216770.apse1.nitrousbox.com:8080/quotes/' +  $('.delete-value').val(),    
       dataType: "JSON",
+      error: function(xhr, textStatus, errorThrown){
+        alert("Deletion Error!");
+      },
       success: function(response) {
-          listRequest(); 
+          $('.delete-value').val("");
+          listRequest();
           console.log("Great delete success!", response);
       }
       // error: function(response) {
@@ -113,21 +119,25 @@ $(document).ready(function() {
 
 
 //pills
- $('.add-div, .delete-div, .list-div').hide();
+ $('.add-div, .delete-div, .search-div').hide();
+ $('.listPillBut').css("background","#EFEFEC");
 
  $(document).on('click','.searchPillBut', function() {
    $('.delete-div, .list-div, .add-div').hide();
+   $('.listPillBut').css("background","transparent");
    $('.search-div').show();
  })
 
  $(document).on('click','.addPillBut', function() {
    // $(this).attr("class", "active");
    $('.search-div, .delete-div, .list-div').hide();
+   $('.listPillBut').css("background","transparent");
    $('.add-div').show();
  })
 
  $(document).on('click','.listPillBut', function() {
    $('.search-div, .add-div, .delete-div').hide();
+   $('.listPillBut').css("background","transparent");
    $('.list-div').show();
  })
 

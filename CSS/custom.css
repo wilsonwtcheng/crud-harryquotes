@@ -1,4 +1,21 @@
+body {
+  margin: 0 auto;
+  width: 90%;
+}
 
+.search-div, .add-div, .list-div, .delete-div {
+  background-color: #EFEFEC;
+  padding: 5px 20px 20px 20px;
+  border-radius: 5px;
+}
+
+.database-box {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #EFEFEC;
+}
+
+/*
 .table {
 	width: 100%;
 	border: 1px solid black;
@@ -49,20 +66,20 @@
 /*	margin: 0px auto;
 	display: block;*/
 /*	max-width:600px;
-*/	max-width: 100%;
+    max-width: 100%;
  /*   height: auto;
     width: auto;*/
 /*    margin:0px auto;
     display:block;*/
-}
+/*}
 
 .vert-offset{
     margin-top: 1em;
-}
+}*/
 ''
 /* You can include your custom styling here */
 
-<!-- Box test codes start -->
+/*<!-- Box test codes start -->
 <div class="row"> 
     <div class="col-sm-6 col-md-6 col-lg-6 yellow"> WHAT</div> <!-- this sets the stage for the left hand side column -->
        <div class="col-sm-6 col-md-6 green col-lg-6 purple"> <!-- this sets the stage for the right hand side column -->
@@ -73,4 +90,4 @@
 </div>
 
 
-<!-- box test codes end -->
+<!-- box test codes end -->*/*/
