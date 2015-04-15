@@ -49,9 +49,6 @@ $(document).ready(function() {
         console.log("Great success", response);
         $('.newQuote').val("");
         $('.newAuthor').val("");
-        // $('#all-posts > tbody').text(''); 
-        // response(function (post) {
-        //   $('#all-posts > tbody').append("<tr class='post-item'>" + "<td>" + post._id + "</td>" + "<td>" + post.quote + "</td>" + "<td>" + post.author + "</td></tr>" );
           listRequest();
         }
       
@@ -73,19 +70,6 @@ $(document).ready(function() {
       }
     }) 
   }
-
-//delete request
-  // function deleteRequest() {
-  //   $.ajax({
-  //     type: "DELETE",
-  //     url: 'http://harry-quotes-216770.apse1.nitrousbox.com:8080/quotes/' +  $('.delete-value').val(),    
-  //     dataType: "JSON",
-  //     success: function(response) {
-  //       listRequest(); 
-  //       console.log("Great delete success!", response);
-  //     }
-  //   })
-  // }
   
   function deleteRequest() {
     $.ajax({
@@ -100,23 +84,8 @@ $(document).ready(function() {
           listRequest();
           console.log("Great delete success!", response);
       }
-      // error: function(response) {
-      //     console.log("you suck ass")
-      // }
     })
   }
-
-
-// success: function(response) {
-//     if (response == 'success') 
-//         window.location.replace("home");
-//     else if (response == "failed") 
-//         window.location.replace("failed");
-//     else 
-//         $("#message").html("<div class='error_log'><p class='error'>Invalid username and/or password.</p></div>");
-// }​
-
-
 
 //pills
  $('.add-div, .delete-div, .search-div').hide();
@@ -148,17 +117,10 @@ $(document).ready(function() {
  })
 
 //awesome video pill
-  $('.awesome-div').hide();
- //  $('.awesomeBut').css("background","#EFEFEC");
- //  $(document).on('click','.awesomeBut', function() {
- //   $('.awesome-div').show();
- // })
-
-  
+  $('.awesome-div').hide();  
   $(document).on('click','.awesomeBut', function() {
    $('.awesome-div').toggle();
  })
-
 
 
 
