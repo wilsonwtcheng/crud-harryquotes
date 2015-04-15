@@ -149,11 +149,17 @@ $(document).ready(function() {
 
 //awesome video pill
   $('.awesome-div').hide();
-  $('.awesomeBut').css("background","#EFEFEC");
+ //  $('.awesomeBut').css("background","#EFEFEC");
+ //  $(document).on('click','.awesomeBut', function() {
+ //   $('.awesome-div').show();
+ // })
+
+  
   $(document).on('click','.awesomeBut', function() {
-   $('.awesome-div').show();
- 
+   $('.awesome-div').toggle();
  })
+
+
 
 
  })
