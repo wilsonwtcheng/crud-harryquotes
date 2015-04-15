@@ -120,6 +120,7 @@ $(document).ready(function() {
 
 //pills
  $('.add-div, .delete-div, .search-div').hide();
+
  $('.listPillBut').css("background","#EFEFEC");
 
  $(document).on('click','.searchPillBut', function() {
@@ -146,7 +147,13 @@ $(document).ready(function() {
    $('.delete-div').show();
  })
 
-
+//awesome video pill
+  $('.awesome-div').hide();
+  $('.awesomeBut').css("background","#EFEFEC");
+  $(document).on('click','.awesomeBut', function() {
+   $('.awesome-div').show();
+ 
+ })
 
 
  })
